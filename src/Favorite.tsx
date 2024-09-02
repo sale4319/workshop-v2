@@ -10,6 +10,7 @@ export const Favorite = ({ likeStatus, likeAction }: Props) => {
         color={"error"}
         onClick={likeAction}
         className="Favorite-position"
+        data-testid="Favorite-full"
       />
     );
   }
@@ -18,6 +19,7 @@ export const Favorite = ({ likeStatus, likeAction }: Props) => {
       onClick={likeAction}
       color={"error"}
       className="Favorite-position"
+      data-testid="Favorite-outline"
     />
   );
 };

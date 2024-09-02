@@ -20,6 +20,7 @@ export const Homepage = () => {
           src={logo}
           className="App-logo"
           alt="logo"
+          data-testid="React-logo"
         />
       ) : null}
     </>
