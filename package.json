@@ -1,6 +1,7 @@
 {
   "name": "sandbox",
   "version": "0.1.0",
+  "homepage": "https://sale4319.github.io/workshop-v2",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -28,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -48,5 +51,9 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "yarn@4.4.1"
+  "packageManager": "yarn@4.4.1",
+  "devDependencies": {
+    "@types/gh-pages": "^6",
+    "gh-pages": "^6.1.1"
+  }
 }
