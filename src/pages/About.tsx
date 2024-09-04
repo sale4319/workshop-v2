@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import bat from "./bat.svg";
+import bat from "../assets/bat.svg";
 
 export const About = () => {
   const navigate = useNavigate();

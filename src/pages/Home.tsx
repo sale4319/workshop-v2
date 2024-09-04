@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Bounce, toast } from "react-toastify";
-import { Favorite } from "./Favorite";
-import logo from "./logo.svg";
+import { Favorite } from "../components/Favorite";
+import logo from "../assets/logo.svg";
 
 export const Homepage = () => {
   const navigate = useNavigate();
