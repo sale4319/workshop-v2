@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import App from "./App";
 import { MemoryRouter } from "react-router-dom";
+import userEvent from "@testing-library/user-event";
 
 const mockedUsedNavigate = jest.fn();
 
@@ -29,7 +30,7 @@ describe("Test application", () => {
     const favoriteButton = screen.getByTestId("Favorite-outline");
     expect(favoriteButton).toBeInTheDocument();
 
-    fireEvent.click(favoriteButton);
+    userEvent.click(favoriteButton);
 
     const favoriteButtonClicked = screen.getByTestId("Favorite-full");
     expect(favoriteButtonClicked).toBeInTheDocument();
@@ -44,7 +45,7 @@ describe("Test application", () => {
     const noReactLogo = screen.queryByTestId("React-logo");
     expect(noReactLogo).not.toBeInTheDocument();
 
-    fireEvent.click(favoriteButton);
+    userEvent.click(favoriteButton);
 
     const favoriteButtonClicked = screen.getByTestId("Favorite-full");
     expect(favoriteButtonClicked).toBeInTheDocument();
@@ -62,7 +63,7 @@ describe("Test application", () => {
     const noReactLogo = screen.queryByTestId("React-logo");
     expect(noReactLogo).not.toBeInTheDocument();
 
-    fireEvent.click(favoriteButton);
+    userEvent.click(favoriteButton);
 
     const favoriteButtonClicked = screen.getByTestId("Favorite-full");
     expect(favoriteButtonClicked).toBeInTheDocument();
@@ -70,7 +71,7 @@ describe("Test application", () => {
     const reactLogo = screen.getByTestId("React-logo");
     expect(reactLogo).toBeInTheDocument();
 
-    fireEvent.click(reactLogo);
+    userEvent.click(reactLogo);
 
     expect(mockedUsedNavigate).toHaveBeenCalledWith("/About");
   });
